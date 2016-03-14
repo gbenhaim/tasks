@@ -19,7 +19,7 @@ class Foo:
 
 def make_it_singelton(c):
     """
-    method2
+    method2 - function decorator
     :param c: The class to warp, this decorator receives wrap it with the function
      "get_instance" (which adds to it the singleton feature) and then returns the function.
     :return: get_instance wrapar
@@ -36,7 +36,7 @@ def make_it_singelton(c):
 
 class MakeItSingelton:
     """
-        method3
+        method3 - Class decorator
         This class warps a given class and give it singleton features
     """
 
