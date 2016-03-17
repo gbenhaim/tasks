@@ -52,12 +52,12 @@ class MakeItSingleton:
 
 def make_it_singleton_2(c):
     """
-
+    method4
     :param c:
     :return: class Wrap
     """
-    class Wrap(object):
 
+    class Wrap(object):
         _the_type = c
         _instance = None
 
@@ -77,15 +77,12 @@ def main():
     # A is an object of type MakeItSingelton
     @MakeItSingleton
     class A:
-
         def __init__(self, name):
             self.name = name
-
 
     print(isinstance(A, MakeItSingleton))
     a = A('Gal')
     b = A('Tomer')
-
 
     print(a, a.name)
     print(b, b.name)
@@ -95,7 +92,6 @@ def main():
 
     @make_it_singleton_2
     class B:
-
         def __init__(self, name):
             self.name = name
 
