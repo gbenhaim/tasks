@@ -1,4 +1,4 @@
-from tasks.single import *
+from ..single import *
 import unittest
 
 

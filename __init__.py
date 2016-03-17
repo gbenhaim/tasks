@@ -1,2 +1,2 @@
-from tasks import single
+import single
 print("importing single")
