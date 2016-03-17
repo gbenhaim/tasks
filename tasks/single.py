@@ -46,7 +46,6 @@ class MakeItSingleton:
     def __call__(self, *args, **kwargs):
         if self.instance is None:
             self.instance = self.c(*args, **kwargs)
-            print self.instance
         return self.instance
 
 
@@ -81,6 +80,7 @@ def main():
             self.name = name
 
     print(isinstance(A, MakeItSingleton))
+    print(A)
     a = A('Gal')
     b = A('Tomer')
 
