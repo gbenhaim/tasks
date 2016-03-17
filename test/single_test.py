@@ -16,8 +16,8 @@ class SingletonTest(unittest.TestCase):
         test for method1
         :return:
         """
-        f = Foo.GetInstance()
-        g = Foo.GetInstance()
+        f = Foo.get_instance()
+        g = Foo.get_instance()
         self.assertTrue(f is g)
 
     def test_method_2(self):
@@ -25,7 +25,7 @@ class SingletonTest(unittest.TestCase):
         test for method2
         :return:
         """
-        @make_it_singelton
+        @make_it_singleton
         class Goo:
             def __init__(self, name):
                 self.name = name
@@ -39,7 +39,7 @@ class SingletonTest(unittest.TestCase):
         test for method3
         :return:
         """
-        @MakeItSingelton
+        @MakeItSingleton
         class Goo:
             def __init__(self, name):
                 self.name = name
