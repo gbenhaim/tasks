@@ -71,7 +71,32 @@ def make_it_singleton_2(c):
     return Wrap
 
 
+class TheSingleton(object):
+
+    instance = None
+    """
+        I'm overriding the constructor.
+        the object creation is done by the object class
+    """
+    def __new__(cls, *args, **kwargs):
+        if TheSingleton.instance is None:
+            print('from new ', cls)
+            TheSingleton.instance = object.__new__(cls, *args, **kwargs)
+        return TheSingleton.instance
+
+
 def main():
+
+    ins = TheSingleton()
+    print(ins)
+
+    ins2 = TheSingleton()
+
+    print(ins2)
+
+    print(ins is ins2)
+
+    '''
     # A = MakeItSingelton(A)
     # A is an object of type MakeItSingelton
     @MakeItSingleton
@@ -101,6 +126,8 @@ def main():
     print(x)
     print(y)
     print(x is y)
+    '''
+
 
 
 main()
